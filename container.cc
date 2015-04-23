@@ -22,10 +22,11 @@
 #define CLONE_NEWNET                    0x40000000                /* New network namespace */
 #define CLONE_IO                            0x80000000                /* Clone io context */
 
-/* 定义一个给 clone 用的栈，栈大小1M */
+/// container stack
 #define STACK_SIZE (1024 * 1024)
 static char container_stack[STACK_SIZE];
 
+/// container shell
 char container_cmd[] = "/bin/bash";
 char container_opt[] = "-l";
 char* container_args[] = {
@@ -34,6 +35,7 @@ char* container_args[] = {
     NULL
 };
 
+/// container main
 int container_main(void* arg)
 {
     printf("Container [%5d] - inside the container!\n", getpid());
