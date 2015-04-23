@@ -27,8 +27,10 @@
 static char container_stack[STACK_SIZE];
 
 char container_cmd[] = "/bin/bash";
+char container_opt[] = "-l";
 char* container_args[] = {
     container_cmd,
+//    container_opt,
     NULL
 };
 
