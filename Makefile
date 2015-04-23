@@ -15,3 +15,7 @@ container: $(OBJS)
 clean:
 	rm -rf $(OBJS)
 	rm -rf container
+
+rootfs:
+	rm -rf rootfs
+	tar zxf rootfs.tar.gz
