@@ -1,6 +1,6 @@
 # container
 Container
 
-make rootfs
-make
+make rootfs  
+make  
 sudo ./container
